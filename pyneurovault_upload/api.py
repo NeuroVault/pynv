@@ -13,6 +13,7 @@ import urllib2
 import requests
 import json
 import warnings
+import os
 
 class Upload(object):
     def __init__(self, url=None, api_key=None, data=None, name=None, metadata=None, collection_id=None, **kwargs):
@@ -84,12 +85,12 @@ class Upload(object):
             Create collection -> POST /api/collections/
             curl -X POST --data name="test collection vis" -H "Authorization: Bearer poR5rbFmymWdT4mxbiENaCW74ZD04YeTLCxGE6dJ" http://neurovault.org/api/collections/
        
-        params:
+        Args:
         
             api_key: Neurovault API personal access token
             data: dictionary of neurovault fields to add
         
-        returns:
+        Returns:
         
             r: requests object
             
@@ -130,37 +131,32 @@ class Upload(object):
         curl --request PUT --data name="test collection" -H "Authorization: Bearer Qv3hafU46d2vXbHtCtOJyFhNX1ta8zTOd36UesMW" http://neurovault.org/api/collections/1165/
         '''
         
-        if collection_id is not None:
-            self.collection_id = collection_id
-        else:
-            if self.collection_id is None:
-                raise ValueError('Must provide valid collection ID.')
-            
-        if api_key is not None:
-            self.api_key = api_key
-        elif self.api_key is None:
-            raise ValueError('Must use api-key to put data.')     
-        headers = {'Authorization':'Bearer %s' % self.api_key}
-                
-        r = requests.get(self.url + self.collection_id, params=params, headers=headers)
+        raise NotImplementedError()
 
-#         url = 'https://api.github.com/some/endpoint'
-#         payload = {'some': 'data'}
-#         headers = {'content-type': 'application/json'}
-#         r = requests.post(url, data=json.dumps(payload), headers=headers)
-        
-        
     def patch(self, collection_id=None):
         '''
         Partial update (e.g. a single property or multiple properties) -> PATCH /api/collections/<COLLECTION_ID>/
         curl --request PATCH --data name="test collection" -H "Authorization: Bearer Qv3hafU46d2vXbHtCtOJyFhNX1ta8zTOd36UesMW" http://neurovault.org/api/collections/1165/
         '''
         
+        raise NotImplementedError()
+
     def delete(self, collection_id=None, api_key=None):
-        '''
-        Delete -> DELETE /api/collections/<COLLECTION_ID>/
-        curl -X DELETE -H "Authorization: Bearer Qv3hafU46d2vXbHtCtOJyFhNX1ta8zTOd36UesMW" http://neurovault.org/api/collections/1165/
-        Careful with this one. There's no confirmation or undo.
+        ''' Delete a neurovault collection.
+        
+            Careful with this one. There's no confirmation or undo.
+        
+            curl -X DELETE -H "Authorization: Bearer Qv3hafU46d2vXbHtCtOJyFhNX1ta8zTOd36UesMW" http://neurovault.org/api/collections/1165/
+        
+        Args:
+        
+            collection_id: a neurovault collection ID
+            api_key: Neurovault API personal access token
+        
+        Returns:
+        
+            r: requests object
+        
         '''
         
         if api_key is not None:
@@ -169,14 +165,111 @@ class Upload(object):
             raise ValueError('Must use api-key to put data.')     
         headers = {'Authorization':'Bearer %s' % self.api_key}
 
+        # We should add a check to see if the collection ID exists
         if collection_id is not None:
             self.collection_id = collection_id
         elif self.collection_id is None:
-            raise ValueError('Must specify valid neurovault collection ID.')     
-        if not isinstance(self.collection_id,str):
-            self.collection_id = str(self.collection_id)
+            raise ValueError('Must specify a neurovault collection ID.')     
     
-        r = requests.delete(self.url + self.collection_id, headers=headers)
-
+        r = requests.delete(self.url + str(self.collection_id), headers=headers)
+        
+        # notify of any errors
+        r.raise_for_status()
+        
         return r
+            
+    def add_image(self, image_file=None, image_data=None, api_key=None, collection_id=None):
+        ''' Add a new image to a neurovault collection
+        
+            curl -H "Authorization: Bearer poR5rbFmymWdT4mxbiENaCW74ZD04YeTLCxGE6dJ" -F "map_type=T" -F "name=new_image_name" -F "modality=fMRI-BOLD" -F "file=@/Users/lukechang/Downloads/Test_Brain_Data/visual_test.nii.gz" http://neurovault.org/api/collections/1205/images/
+        
+        Args:
+        
+            image_file: path to image file to upload
+            collection_id: a neurovault collection ID
+            api_key: Neurovault API personal access token
+            data: dictionary of neurovault fields to add
+        
+        Returns:
+        
+            r: requests object
+            
+        '''
+        
+#             MAP_TYPE_CHOICES = (
+#         (T, 'T map'),
+#         (Z, 'Z map'),
+#         (F, 'F map'),
+#         (X2, 'Chi squared map'),
+#         (P, 'P map (given null hypothesis)'),
+#         (M, 'multivariate-beta map'),
+#         (U, 'univariate-beta map'),
+#         (R, 'ROI/mask'),
+#         (Pa, 'parcellation'),
+#         (A, 'anatomical'),
+#         (OTHER, 'other'),
+#     )
+#     ANALYSIS_LEVEL_CHOICES = (
+#         (S, 'single-subject'),
+#         (G, 'group'),
+#         (M, 'meta-analysis'),
+#         (OTHER, 'other'),
+#     )
+#     MODALITY_CHOICES = (
+#         (fMRI_BOLD, 'fMRI-BOLD'),
+#         (fMRI_CBF, 'fMRI-CBF'),
+#         (fMRI_CBV, 'fMRI-CBV'),
+#         (Diffusion_MRI, 'Diffusion MRI'),
+#         (Structural_MRI, 'Structural MRI'),
+#         (PET_FDG, 'PET FDG'),
+#         (PET_15O, 'PET [15O]-water'),
+#         (PET_OTHER, 'PET other'),
+#         (MEG, 'MEG'),
+#         (EEG, 'EEG'),
+#         (Other, 'Other')
+#     )
 
+    
+        if api_key is not None:
+            self.api_key = api_key
+        elif self.api_key is None:
+            raise ValueError('Must use api-key to put data.')     
+        headers = {'Authorization':'Bearer %s' % self.api_key}
+
+        # we should add check to make sure collection exists
+        if collection_id is not None:
+            self.collection_id = collection_id
+        elif self.collection_id is None:
+            raise ValueError('Must specify a neurovault collection ID.')        
+
+        if image_data is not None:
+            if isinstance(data,dict):
+                if set(image_data.keys()).issuperset({'modality','name','map_type'}):
+                    self.image_data = image_data
+                else:
+                    raise ValueError('"name", "map_type", and "modality" are required in image_data dictionary.')
+            else:
+                raise ValueError('image_data must be a dictionary.')
+        else:
+             raise ValueError('You must include an image_data dictionary including "name", "map_type", and "modality".')
+        
+        # requests has difficulty with large files https://toolbelt.readthedocs.io/en/latest/uploading-data.html
+        if image_file is not None:
+            if os.path.isfile:
+                files = {'file': open(image_file, 'rb')}
+            else:
+                raise ValueError('Image file does not exist.') 
+        else:
+            raise ValueError('Must specify a valid image file to upload.')  
+
+        r = requests.post(self.url + str(self.collection_id) + '/images/', files=files, data=self.image_data, headers=headers)                            
+        
+        # notify of any errors
+        r.raise_for_status()
+        
+        # add new fields to self
+        self.json_image_data = json.dumps(r.content)
+#         self.image_id = self.json_image_data['id']
+        
+        return r
+    
