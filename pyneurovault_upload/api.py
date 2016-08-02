@@ -243,7 +243,7 @@ class Upload(object):
             raise ValueError('Must specify a neurovault collection ID.')        
 
         if image_data is not None:
-            if isinstance(data,dict):
+            if isinstance(image_data,dict):
                 if set(image_data.keys()).issuperset({'modality','name','map_type'}):
                     self.image_data = image_data
                 else:
