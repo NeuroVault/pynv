@@ -44,6 +44,9 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+.pytest-incremental.db
+.testmondata
+deps.json
 
 # Translations
 *.mo
