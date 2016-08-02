@@ -5,9 +5,9 @@
     Classes for interfacing with http://neurovault.org upload api
 '''
 
-__all__ = ['Upload']
-__author__ = ["Luke Chang"]
-__license__ = "MIT"
+__all__ = ['Client']
+__author__ = ['Luke Chang']
+__license__ = 'MIT'
 
 import requests
 import json
@@ -15,28 +15,28 @@ import warnings
 import os
 
 
-class Upload(object):
+class Client(object):
     '''
     A python interface into the NeuroVault API
 
     Example usage
         Import the class
-        >>> from pyneurovault_upload import Upload
+        >>> from pyneurovault_upload import Client
 
-        To create an instance of the Upload class, with no
+        To create an instance of the Client class, with no
         authentication (anonymous API call):
 
-        >>> upload = Upload()
+        >>> upload = Client()
 
         Or with personal access token authentication:
 
-        >>> upload = Upload(api_key='y3o1u4r1a5c9c2e6s5s3t5o8k9e7n9')
+        >>> upload = Client(api_key='y3o1u4r1a5c9c2e6s5s3t5o8k9e7n9')
     '''
 
     def __init__(self, url=None, api_key=None, data=None, name=None,
                  metadata=None, collection_id=None, **kwargs):
         '''
-        Instantiate a new NeuroVault Upload object.
+        Instantiate a new NeuroVault Client object.
         Args:
 
             api_key: Neurovault API personal access token

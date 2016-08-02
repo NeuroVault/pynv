@@ -1,6 +1,6 @@
-from pyneurovault_upload import Upload
+from pyneurovault_upload import Client
 
 
 def test_client():
-    upload = Upload()
+    upload = Client()
     assert upload.post

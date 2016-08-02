@@ -7,23 +7,23 @@ Python library for interfacing with http://neurovault.org upload API
 git clone https://github.com/ljchang/neurolearn
 python setup.py install
 ```
-   
+
 ## Example Useage
 
-<em>Initialize an Upload instance</em>
+<em>Initialize a Client instance</em>
 <p>
-First, we need to create an instance of the Upload class.  This requires adding your neurovault api key which can be found under 'Personal Access tokens' tab in the Account Settings.
+First, we need to create an instance of the Client class.  This requires adding your neurovault api key which can be found under 'Personal Access tokens' tab in the Account Settings.
 </p>
 
 ``` python
-from pyneurovault_upload.api import Upload
+from pyneurovault_upload.api import Client
 
-api = Upload(api_key='Your_Neurovault_API_Key')
+api = Client(api_key='Your_Neurovault_API_Key')
 ```
 
 <em>Create a Collection</em>
 <p>
-To create a new collection in neurovault you need to pass a dictionary of all of the metadata you would like to specify in the collection.  At a minimum you must specify a collection name.  Creating a collection will automatically store the collection id in the object instance to help with further methods. 
+To create a new collection in neurovault you need to pass a dictionary of all of the metadata you would like to specify in the collection.  At a minimum you must specify a collection name.  Creating a collection will automatically store the collection id in the object instance to help with further methods.
 </p>
 
 ``` python
