@@ -38,7 +38,7 @@ Once a collection is created you can add images to it using the 'add_image()' me
 ``` python
 image_file='path_to_image_file'
 image_data={'name':'Parcellation_k25','modality':'Other','map_type':'Pa'}
-r3 = api.add_image(image_file=image_file,image_data=image_data)
+r2 = api.add_image(image_file=image_file,image_data=image_data)
 ```
 
 <em>Delete a Collection</em>
@@ -47,5 +47,5 @@ To delete the same collection you can simply run the delete method.  You can als
 </p>
 
 ``` python
-r2 = api.post(collection_id=collection_id)
+r3 = api.delete(collection_id=collection_id)
 ```
