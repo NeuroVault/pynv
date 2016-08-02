@@ -43,7 +43,7 @@ r2 = api.add_image(image_file=image_file,image_data=image_data)
 
 <em>Delete a Collection</em>
 <p>
-To delete the same collection you can simply run the delete method.  You can also delete any collection that you own by passing a 'collection id'.
+To delete the same collection you can simply run the delete method.  You can also delete any collection that you own by passing a 'collection id'.  Be careful with this as you will be unable to recover any collections that you delete!
 </p>
 
 ``` python
