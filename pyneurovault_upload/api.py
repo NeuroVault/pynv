@@ -16,8 +16,32 @@ import os
 
 
 class Upload(object):
+    '''
+    A python interface into the NeuroVault API
 
-    def __init__(self, url=None, api_key=None, data=None, name=None, metadata=None, collection_id=None, **kwargs):
+    Example usage
+        Import the class
+        >>> from pyneurovault_upload import Upload
+
+        To create an instance of the Upload class, with no
+        authentication (anonymous API call):
+
+        >>> upload = Upload()
+
+        Or with personal access token authentication:
+
+        >>> upload = Upload(api_key='y3o1u4r1a5c9c2e6s5s3t5o8k9e7n9')
+    '''
+
+    def __init__(self, url=None, api_key=None, data=None, name=None,
+                 metadata=None, collection_id=None, **kwargs):
+        '''
+        Instantiate a new NeuroVault Upload object.
+        Args:
+
+            api_key: Neurovault API personal access token
+            data: dictionary of neurovault fields to add
+        '''
 
         if url is not None:
             self.url = url
@@ -103,6 +127,7 @@ class Upload(object):
             self.api_key = api_key
         elif self.api_key is None:
             raise ValueError('Must use api-key to put data.')
+
         headers = {'Authorization': 'Bearer %s' % self.api_key}
 
         if data is not None:
