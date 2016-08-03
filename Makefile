@@ -1,0 +1,5 @@
+
+watch:
+	@ptw
+
+.PHONY: watch
