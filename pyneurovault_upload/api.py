@@ -14,6 +14,8 @@ import json
 import warnings
 import os
 
+from . import API_BASE_URL
+
 
 class Client(object):
     '''
@@ -33,8 +35,14 @@ class Client(object):
         >>> upload = Client(access_token='y3o1u4r1a5c9c2e6s5s3t5o8k9e7n9')
     '''
 
-    def __init__(self, url=None, access_token=None, data=None, name=None,
-                 metadata=None, collection_id=None, **kwargs):
+    def __init__(self, url=None,
+                 access_token=None,
+                 data=None,
+                 name=None,
+                 metadata=None,
+                 collection_id=None,
+                 api_base_url=None,
+                 **kwargs):
         '''
         Instantiate a new NeuroVault Client object.
         Args:
@@ -42,11 +50,12 @@ class Client(object):
             access_token: Neurovault API personal access token
             data: dictionary of neurovault fields to add
         '''
+        self.api_base_url = api_base_url or API_BASE_URL
 
         if url is not None:
             self.url = url
         else:
-            self.url = 'http://neurovault.org/api/collections/'
+            self.url = '%s%s' % (self.api_base_url, '/collections/')
 
         if access_token is not None:
             self.access_token = access_token
