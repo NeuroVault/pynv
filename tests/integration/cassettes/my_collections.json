@@ -1,0 +1,43 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2016-08-03T23:04:56",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": "Bearer <ACCESS_TOKEN>"
+        },
+        "method": "GET",
+        "uri": "http://neurovault.org/api/my_collections/"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"count\":2,\"next\":null,\"previous\":null,\"results\":[{\"id\":1167,\"url\":\"http://neurovault.org/collections/1167/\",\"owner\":889,\"contributors\":\"\",\"owner_name\":\"testuser2\",\"number_of_images\":1,\"name\":\"First test collection\",\"DOI\":null,\"authors\":\"\",\"paper_url\":\"\",\"journal_name\":\"\",\"description\":\"\",\"full_dataset_url\":\"\",\"add_date\":\"2016-02-05T21:17:28.771611Z\",\"modify_date\":\"2016-08-03T23:08:02.069602Z\",\"doi_add_date\":null,\"type_of_design\":null,\"number_of_imaging_runs\":null,\"number_of_experimental_units\":null,\"length_of_runs\":null,\"length_of_blocks\":null,\"length_of_trials\":\"\",\"optimization\":null,\"optimization_method\":\"\",\"subject_age_mean\":null,\"subject_age_min\":null,\"subject_age_max\":null,\"handedness\":null,\"proportion_male_subjects\":null,\"inclusion_exclusion_criteria\":\"\",\"number_of_rejected_subjects\":null,\"group_comparison\":null,\"group_description\":\"\",\"scanner_make\":\"\",\"scanner_model\":\"\",\"field_strength\":null,\"pulse_sequence\":\"\",\"parallel_imaging\":\"\",\"field_of_view\":null,\"matrix_size\":null,\"slice_thickness\":null,\"skip_distance\":null,\"acquisition_orientation\":\"\",\"order_of_acquisition\":null,\"repetition_time\":null,\"echo_time\":null,\"flip_angle\":null,\"software_package\":\"\",\"software_version\":\"\",\"order_of_preprocessing_operations\":\"\",\"quality_control\":\"\",\"used_b0_unwarping\":null,\"b0_unwarping_software\":\"\",\"used_slice_timing_correction\":null,\"slice_timing_correction_software\":\"\",\"used_motion_correction\":null,\"motion_correction_software\":\"\",\"motion_correction_reference\":\"\",\"motion_correction_metric\":\"\",\"motion_correction_interpolation\":\"\",\"used_motion_susceptibiity_correction\":null,\"used_intersubject_registration\":null,\"intersubject_registration_software\":\"\",\"intersubject_transformation_type\":null,\"nonlinear_transform_type\":\"\",\"transform_similarity_metric\":\"\",\"interpolation_method\":\"\",\"object_image_type\":\"\",\"functional_coregistered_to_structural\":null,\"functional_coregistration_method\":\"\",\"coordinate_space\":null,\"target_template_image\":\"\",\"target_resolution\":null,\"used_smoothing\":null,\"smoothing_type\":\"\",\"smoothing_fwhm\":null,\"resampled_voxel_size\":null,\"intrasubject_model_type\":\"\",\"intrasubject_estimation_type\":\"\",\"intrasubject_modeling_software\":\"\",\"hemodynamic_response_function\":\"\",\"used_temporal_derivatives\":null,\"used_dispersion_derivatives\":null,\"used_motion_regressors\":null,\"used_reaction_time_regressor\":null,\"used_orthogonalization\":null,\"orthogonalization_description\":\"\",\"used_high_pass_filter\":null,\"high_pass_filter_method\":\"\",\"autocorrelation_model\":\"\",\"group_model_type\":\"\",\"group_estimation_type\":\"\",\"group_modeling_software\":\"\",\"group_inference_type\":null,\"group_model_multilevel\":\"\",\"group_repeated_measures\":null,\"group_repeated_measures_method\":\"\"},{\"id\":1610,\"url\":\"http://neurovault.org/collections/1610/\",\"owner\":889,\"contributors\":\"\",\"owner_name\":\"testuser2\",\"number_of_images\":0,\"name\":\"Second test collection\",\"DOI\":null,\"authors\":\"\",\"paper_url\":\"\",\"journal_name\":\"\",\"description\":\"\",\"full_dataset_url\":\"\",\"add_date\":\"2016-08-03T23:07:35.031794Z\",\"modify_date\":\"2016-08-03T23:07:35.031819Z\",\"doi_add_date\":null,\"type_of_design\":null,\"number_of_imaging_runs\":null,\"number_of_experimental_units\":null,\"length_of_runs\":null,\"length_of_blocks\":null,\"length_of_trials\":\"\",\"optimization\":null,\"optimization_method\":\"\",\"subject_age_mean\":null,\"subject_age_min\":null,\"subject_age_max\":null,\"handedness\":null,\"proportion_male_subjects\":null,\"inclusion_exclusion_criteria\":\"\",\"number_of_rejected_subjects\":null,\"group_comparison\":null,\"group_description\":\"\",\"scanner_make\":\"\",\"scanner_model\":\"\",\"field_strength\":null,\"pulse_sequence\":\"\",\"parallel_imaging\":\"\",\"field_of_view\":null,\"matrix_size\":null,\"slice_thickness\":null,\"skip_distance\":null,\"acquisition_orientation\":\"\",\"order_of_acquisition\":null,\"repetition_time\":null,\"echo_time\":null,\"flip_angle\":null,\"software_package\":\"\",\"software_version\":\"\",\"order_of_preprocessing_operations\":\"\",\"quality_control\":\"\",\"used_b0_unwarping\":null,\"b0_unwarping_software\":\"\",\"used_slice_timing_correction\":null,\"slice_timing_correction_software\":\"\",\"used_motion_correction\":null,\"motion_correction_software\":\"\",\"motion_correction_reference\":\"\",\"motion_correction_metric\":\"\",\"motion_correction_interpolation\":\"\",\"used_motion_susceptibiity_correction\":null,\"used_intersubject_registration\":null,\"intersubject_registration_software\":\"\",\"intersubject_transformation_type\":null,\"nonlinear_transform_type\":\"\",\"transform_similarity_metric\":\"\",\"interpolation_method\":\"\",\"object_image_type\":\"\",\"functional_coregistered_to_structural\":null,\"functional_coregistration_method\":\"\",\"coordinate_space\":null,\"target_template_image\":\"\",\"target_resolution\":null,\"used_smoothing\":null,\"smoothing_type\":\"\",\"smoothing_fwhm\":null,\"resampled_voxel_size\":null,\"intrasubject_model_type\":\"\",\"intrasubject_estimation_type\":\"\",\"intrasubject_modeling_software\":\"\",\"hemodynamic_response_function\":\"\",\"used_temporal_derivatives\":null,\"used_dispersion_derivatives\":null,\"used_motion_regressors\":null,\"used_reaction_time_regressor\":null,\"used_orthogonalization\":null,\"orthogonalization_description\":\"\",\"used_high_pass_filter\":null,\"high_pass_filter_method\":\"\",\"autocorrelation_model\":\"\",\"group_model_type\":\"\",\"group_estimation_type\":\"\",\"group_modeling_software\":\"\",\"group_inference_type\":null,\"group_model_multilevel\":\"\",\"group_repeated_measures\":null,\"group_repeated_measures_method\":\"\"}]}"
+        },
+        "headers": {
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Headers": "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Origin": "*",
+          "Allow": "GET, POST, HEAD, OPTIONS",
+          "Connection": "keep-alive",
+          "Content-Type": "application/json; charset=utf-8",
+          "Date": "Wed, 03 Aug 2016 23:08:46 GMT",
+          "Server": "nginx/1.11.1",
+          "Transfer-Encoding": "chunked",
+          "Vary": "Accept-Encoding"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "http://neurovault.org/api/my_collections/"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.7.1"
+}
