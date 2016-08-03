@@ -30,16 +30,16 @@ class Client(object):
 
         Or with personal access token authentication:
 
-        >>> upload = Client(api_key='y3o1u4r1a5c9c2e6s5s3t5o8k9e7n9')
+        >>> upload = Client(access_token='y3o1u4r1a5c9c2e6s5s3t5o8k9e7n9')
     '''
 
-    def __init__(self, url=None, api_key=None, data=None, name=None,
+    def __init__(self, url=None, access_token=None, data=None, name=None,
                  metadata=None, collection_id=None, **kwargs):
         '''
         Instantiate a new NeuroVault Client object.
         Args:
 
-            api_key: Neurovault API personal access token
+            access_token: Neurovault API personal access token
             data: dictionary of neurovault fields to add
         '''
 
@@ -48,10 +48,10 @@ class Client(object):
         else:
             self.url = 'http://neurovault.org/api/collections/'
 
-        if api_key is not None:
-            self.api_key = api_key
+        if access_token is not None:
+            self.access_token = access_token
         else:
-            self.api_key = None
+            self.access_token = None
 
         if name is not None:
             self.name = name
@@ -106,7 +106,7 @@ class Client(object):
         else:
             self.data = {}
 
-    def post(self, data=None, api_key=None):
+    def post(self, data=None, access_token=None):
         ''' Create a new neurovault collection.
 
             Create collection -> POST /api/collections/
@@ -114,7 +114,7 @@ class Client(object):
 
         Args:
 
-            api_key: Neurovault API personal access token
+            access_token: Neurovault API personal access token
             data: dictionary of neurovault fields to add
 
         Returns:
@@ -123,12 +123,12 @@ class Client(object):
 
          '''
 
-        if api_key is not None:
-            self.api_key = api_key
-        elif self.api_key is None:
+        if access_token is not None:
+            self.access_token = access_token
+        elif self.access_token is None:
             raise ValueError('Must use api-key to put data.')
 
-        headers = {'Authorization': 'Bearer %s' % self.api_key}
+        headers = {'Authorization': 'Bearer %s' % self.access_token}
 
         if data is not None:
             if isinstance(data, dict):
@@ -156,7 +156,7 @@ class Client(object):
 
         return r
 
-    def put(self, collection_id=None, api_key=None):
+    def put(self, collection_id=None, access_token=None):
         '''
         Update all collection properties (e.g. every collection property: name, description, etc.)  -> PUT /api/collections/<COLLECTION_ID>/
         curl --request PUT --data name="test collection" -H "Authorization: Bearer Qv3hafU46d2vXbHtCtOJyFhNX1ta8zTOd36UesMW" http://neurovault.org/api/collections/1165/
@@ -172,7 +172,7 @@ class Client(object):
 
         raise NotImplementedError()
 
-    def delete(self, collection_id=None, api_key=None):
+    def delete(self, collection_id=None, access_token=None):
         ''' Delete a neurovault collection.
 
             Careful with this one. There's no confirmation or undo.
@@ -182,7 +182,7 @@ class Client(object):
         Args:
 
             collection_id: a neurovault collection ID
-            api_key: Neurovault API personal access token
+            access_token: Neurovault API personal access token
 
         Returns:
 
@@ -190,11 +190,11 @@ class Client(object):
 
         '''
 
-        if api_key is not None:
-            self.api_key = api_key
-        elif self.api_key is None:
+        if access_token is not None:
+            self.access_token = access_token
+        elif self.access_token is None:
             raise ValueError('Must use api-key to put data.')
-        headers = {'Authorization': 'Bearer %s' % self.api_key}
+        headers = {'Authorization': 'Bearer %s' % self.access_token}
 
         # We should add a check to see if the collection ID exists
         if collection_id is not None:
@@ -210,7 +210,7 @@ class Client(object):
 
         return r
 
-    def add_image(self, image_file=None, image_data=None, api_key=None, collection_id=None):
+    def add_image(self, image_file=None, image_data=None, access_token=None, collection_id=None):
         ''' Add a new image to a neurovault collection
 
             curl -H "Authorization: Bearer poR5rbFmymWdT4mxbiENaCW74ZD04YeTLCxGE6dJ" -F "map_type=T" -F "name=new_image_name" -F "modality=fMRI-BOLD" -F "file=@/Users/lukechang/Downloads/Test_Brain_Data/visual_test.nii.gz" http://neurovault.org/api/collections/1205/images/
@@ -219,7 +219,7 @@ class Client(object):
 
             image_file: path to image file to upload
             collection_id: a neurovault collection ID
-            api_key: Neurovault API personal access token
+            access_token: Neurovault API personal access token
             data: dictionary of neurovault fields to add
 
         Returns:
@@ -261,11 +261,11 @@ class Client(object):
 #         (Other, 'Other')
 #     )
 
-        if api_key is not None:
-            self.api_key = api_key
-        elif self.api_key is None:
+        if access_token is not None:
+            self.access_token = access_token
+        elif self.access_token is None:
             raise ValueError('Must use api-key to put data.')
-        headers = {'Authorization': 'Bearer %s' % self.api_key}
+        headers = {'Authorization': 'Bearer %s' % self.access_token}
 
         # we should add check to make sure collection exists
         if collection_id is not None:

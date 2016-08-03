@@ -20,7 +20,7 @@ First, we need to create an instance of the Client class. This requires adding y
 ```python
 from pyneurovault_upload.api import Client
 
-api = Client(api_key='Your_Neurovault_API_Key')
+api = Client(access_token='your_neurovault_personal_access_token')
 ```
 
 <em>Create a Collection</em>
