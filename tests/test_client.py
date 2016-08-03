@@ -12,7 +12,9 @@ def test_my_collections():
 
     recorder = betamax.Betamax(client.session)
     with recorder.use_cassette('my_collections'):
-        collection_list = client.my_collections()
+        result_dict = client.my_collections()
 
-    assert collection_list == []
+    assert result_dict['count'] == len(result_dict['results'])
 
+    for collection in result_dict['results']:
+        assert len(collection['name']) > 0
