@@ -10,7 +10,7 @@ cd pyneurovault_upload
 python setup.py install
 ```
 
-## Example Useage
+## Example Usage
 
 <em>Initialize a Client instance</em>
 <p>
