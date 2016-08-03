@@ -3,8 +3,10 @@ Python library for interfacing with http://neurovault.org upload API
 
 
 ## Installation
+
 ```
-git clone https://github.com/ljchang/neurolearn
+git clone https://github.com/ljchang/pyneurovault_upload.git
+cd pyneurovault_upload
 python setup.py install
 ```
 
