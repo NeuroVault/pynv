@@ -14,7 +14,7 @@ python setup.py install
 
 *Initialize a Client instance*
 
-First, we need to create an instance of the Client class. This requires adding your neurovault api key which can be found under ['Personal Access tokens'](http://neurovault.org/accounts/tokens/) tab in the Account Settings.
+First, we need to create an instance of the Client class. This requires adding your neurovault api key which can be found under [“Personal Access tokens”](http://neurovault.org/accounts/tokens/) tab in the Account Settings.
 
 ```python
 from pyneurovault_upload.api import Client
