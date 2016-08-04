@@ -1,12 +1,3 @@
-import os
-
-import betamax
-
-from pyneurovault_upload import Client
-
-ACCESS_TOKEN = os.environ.get('NEUROVAULT_ACCESS_TOKEN')
-
-
 def test_create_collection_for_anonymous_user():
     pass
 
@@ -39,10 +30,7 @@ def test_delete_collection():
     pass
 
 
-def test_my_collections():
-    client = Client(access_token=ACCESS_TOKEN)
-
-    recorder = betamax.Betamax(client.session)
+def test_my_collections(client, recorder):
     with recorder.use_cassette('my_collections'):
         result_dict = client.my_collections()
 
