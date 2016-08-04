@@ -17,6 +17,11 @@ with betamax.Betamax.configure() as config:
 
 
 @pytest.fixture(scope='function')
+def anonymous_client():
+    return Client()
+
+
+@pytest.fixture(scope='function')
 def client():
     return Client(access_token=ACCESS_TOKEN)
 

@@ -1,9 +1,28 @@
-def test_create_collection_for_anonymous_user():
-    pass
+import pytest
+
+from pyneurovault_upload.exceptions import ValidationError, APIError
 
 
-def test_create_collection_with_missing_fields():
-    pass
+def test_create_collection_for_anonymous_user(anonymous_client, recorder):
+    with pytest.raises(APIError) as excinfo:
+        anonymous_client.create_collection('Anonymous')
+
+    assert excinfo.value.errors == {
+        'detail': 'Authentication credentials were not provided.'
+    }
+
+
+def test_create_collection_with_missing_fields(client, recorder):
+    with pytest.raises(TypeError):
+        client.create_collection()
+
+
+def test_create_collection_with_blank_name(client, recorder):
+    with pytest.raises(ValidationError) as excinfo:
+        collection = client.create_collection('')
+        print collection
+
+    assert excinfo.value.errors == {'name': ['This field may not be blank.']}
 
 
 def test_create_collection():
