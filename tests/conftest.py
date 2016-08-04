@@ -11,6 +11,3 @@ with betamax.Betamax.configure() as config:
     config.cassette_library_dir = 'tests/integration/cassettes'
     config.default_cassette_options['serialize_with'] = 'prettyjson'
     config.define_cassette_placeholder('<ACCESS_TOKEN>', access_token)
-
-
-

@@ -7,6 +7,10 @@ from pyneurovault_upload import Client
 ACCESS_TOKEN = os.environ.get('NEUROVAULT_ACCESS_TOKEN')
 
 
+def test_create_image_with_missing_fields():
+    pass
+
+
 def test_create_image():
     client = Client(access_token=ACCESS_TOKEN)
 
