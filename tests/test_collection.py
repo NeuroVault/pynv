@@ -45,7 +45,7 @@ def test_delete_collection_for_anonymous_user():
     pass
 
 
-def test_delete_collection():
+def test_delete_collection(client):
     pass
 
 
