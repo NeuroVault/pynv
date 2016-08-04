@@ -4,9 +4,13 @@ def test_create_image_with_missing_fields():
 
 def test_create_image(client, recorder):
     with recorder.use_cassette('add_image'):
-        result_dict = client.add_image(1167)
-
-    print result_dict
+        result_dict = client.add_image(
+            1167,
+            './var/motor_lips.nii.gz',
+            name='test image from cli',
+            map_type='Z',
+            modality='fMRI-BOLD',
+        )
 
     assert result_dict == {
         'number_of_subjects': None,

@@ -2,6 +2,8 @@ import requests
 
 from . import API_BASE_URL
 
+from .exceptions import APIError, AuthenticationError, ValidationError
+
 
 class Client(object):
 
@@ -13,11 +15,48 @@ class Client(object):
 
         self.session = requests.Session()
 
-        self.session.headers = (
-            {'Authorization': 'Bearer %s' % access_token}
-            if access_token else None
+        if access_token:
+            self.session.headers.update(
+                {'Authorization': 'Bearer %s' % access_token}
+            )
+
+    def request(
+            self,
+            method,
+            endpoint,
+            data=None,
+            json=None,
+            files=None,
+            suffix='/'):
+        url = '%s%s%s' % (self.api_base_url, endpoint, suffix)
+
+        response = getattr(self.session, method)(
+            url, json=json, data=data, files=files
         )
 
+        if response.ok:
+            return response.json()
+        elif response.status_code == 400:
+            raise ValidationError(response)
+        elif response.status_code == 401:
+            raise AuthenticationError(response)
+        else:
+            raise APIError(response)
+
+    def create_collection(self, name, **data):
+        data['name'] = name
+
+        return self.request('post', 'collections', json=data)
+
     def my_collections(self):
-        url = '%s%s' % (self.api_base_url, 'my_collections/')
-        return self.session.get(url).json()
+        return self.request('get', 'my_collections')
+
+    def add_image(self, collection_id, file_object_or_string, **data):
+        files = {'file': open(file_object_or_string, 'rb')}
+
+        return self.request(
+            'post',
+            'collections/%s/images' % collection_id,
+            data=data,
+            files=files
+        )
