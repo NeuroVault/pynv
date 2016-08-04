@@ -7,6 +7,22 @@ from pyneurovault_upload import Client
 ACCESS_TOKEN = os.environ.get('NEUROVAULT_ACCESS_TOKEN')
 
 
+def test_create_collection():
+    pass
+
+
+def test_read_collection():
+    pass
+
+
+def test_update_collection():
+    pass
+
+
+def test_delete_collection():
+    pass
+
+
 def test_my_collections():
     client = Client(access_token=ACCESS_TOKEN)
 
@@ -20,7 +36,7 @@ def test_my_collections():
         assert len(collection['name']) > 0
 
 
-def test_add_image():
+def test_add_image_to_collection():
     client = Client(access_token=ACCESS_TOKEN)
 
     recorder = betamax.Betamax(client.session)
