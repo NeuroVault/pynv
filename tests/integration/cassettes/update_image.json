@@ -1,0 +1,95 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2016-08-05T18:41:39",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Authorization": "Bearer <ACCESS_TOKEN>",
+          "Connection": "keep-alive",
+          "User-Agent": "python-requests/2.10.0"
+        },
+        "method": "GET",
+        "uri": "http://neurovault.org/api/images/15826/"
+      },
+      "response": {
+        "body": {
+          "base64_string": "H4sIAAAAAAAAA32SS6/TMBCF/0qV9W3ecdIIsUBskEBI6LJhY7nxJPGVH5HtBHoR/51x+uJStcuxzxzPHH+/o9nKqI1G76c2STTM1ixslj42dkiEYgO4JKuanCTRUyR41K7FU9QLCXf7FHDBLt0ZqRNlvLFUisnFWoh4eEW3zkgJnRdG3zW6Sk4+b9roOg8eH8ehTrziTE1FSNME3aCFFwvQiVnGxaAoHjEvmYtaPUv5ULJ6/6/qjPaWOf/A6Ebyj5FiE/WHKeT2vMECl2GayYMTjkpYQJ6Fmqkg+j5x5oFvQrl5Nx+r99jFwXVWTKfogg3nNNxilacZ2ab5Nq2e86zNmrYkMSFZmac/UKgMF/3hrbYJ2iDM24rEO1Lu6iJocaqFyTB+z6SDEPIwWzgP6cdZ7TUT9/G5xWDAQBzdWyY0XUGKX6YBn7LA5w44tTBZcKA9e4jFrTFmrl1vrKKlUidrPR2OW/gRTUcjOVx3mcB2dM84XcwvkPiRdRWnaV0UO1JnaFngLxhPlRaXluPYnVnA4sMIWh46miqrm5qQtDiZHg2pmb0THGUZZlqmTVGVKZJZI5kagwNLTU/dvH9Bli8c4fdg4v6Am/dfvn3afvj6+SPu4EIezotu5VSBB3tpccoYP2rAXPufo7oSeeKQQy8CmyHOu1c3QK/ZnmG9Ph+g/fMXCqTcsDQEAAA=",
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Headers": "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Origin": "*",
+          "Allow": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS",
+          "Connection": "keep-alive",
+          "Content-Encoding": "gzip",
+          "Content-Type": "application/json; charset=utf-8",
+          "Date": "Fri, 05 Aug 2016 18:45:32 GMT",
+          "Server": "nginx/1.11.1",
+          "Transfer-Encoding": "chunked",
+          "Vary": "Accept-Encoding"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "http://neurovault.org/api/images/15826/"
+      }
+    },
+    {
+      "recorded_at": "2016-08-05T18:41:39",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"Updated name <updated> <updated>\"}"
+        },
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Authorization": "Bearer <ACCESS_TOKEN>",
+          "Connection": "keep-alive",
+          "Content-Length": "44",
+          "Content-Type": "application/json",
+          "User-Agent": "python-requests/2.10.0"
+        },
+        "method": "PATCH",
+        "uri": "http://neurovault.org/api/images/15826/"
+      },
+      "response": {
+        "body": {
+          "base64_string": "H4sIAAAAAAAAA32Sy27bMBBFf8XQOtZblCIUXQTZFGhRoEg33RC0OJIY8CGQlFqn6L93KL+aGvZOI965nLk8v6PZyqiNRu+nNkk0zNYsbJY+NnZIhGIDuCSrmpwk0UMkeNSuxUPUCwk3+xRwwc7dGakTZbyxVIrJxVqIeHhDt85ICZ0XRt80ukiOPu/a6DoP/j6MQ514w5maipCmCbpBCy8WoBOzjItBUfzFvGQuavUs5V3J6v2/qjPaW+b8HaMryT9Gik3U76eQ28sGC1yGaSb3TjgqYQF5Emqmguj7xJkHvgnl5sN8qD5evrCfg+usmI4hBkPOaTjFKk8zsk3zbVq95FmbNW1JYkKyMk9/oFAZLvr9e20TtEFYtUURl3VRZCRocb6FybBIz6SDEPcwWziN68dZ7TQTt0G6BmLAaBzdWSY0XZGKX6cBr7LA5w44tTBZcKA9uwvItTGmr11vrKKlUkdrPe0PW/gRTUcjOVx2mcB2dMc4XcwvkPikdRWnKe7+SOoMLQt8D+Op0uLcchi7MwtYvBiRy0NHU2V1UxOSFkfTgyE1s3eCoywj8WOZNkVVpshojYxqDA4sNT118+4VqT4Thc+Difs9bt5/+fZp+/T18zPu4EIezotuJVaBB3tuccoYP2rAXPufo7qweSSSQy8CpSHOm0dXaK/ZnrC9XB/w/fMXxiVXgT4EAAA=",
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Headers": "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Origin": "*",
+          "Allow": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS",
+          "Connection": "keep-alive",
+          "Content-Encoding": "gzip",
+          "Content-Type": "application/json; charset=utf-8",
+          "Date": "Fri, 05 Aug 2016 18:45:33 GMT",
+          "Server": "nginx/1.11.1",
+          "Transfer-Encoding": "chunked",
+          "Vary": "Accept-Encoding"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "http://neurovault.org/api/images/15826/"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.7.1"
+}

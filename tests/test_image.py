@@ -85,8 +85,12 @@ def test_read_image(client, recorder):
     }
 
 
-def test_update_image():
-    pass
+def test_update_image(client, recorder):
+    with recorder.use_cassette('update_image'):
+        image = client.get_image(15826)
+        new_name = image['name'] + ' <updated>'
+        updated_image = client.update_image(15826, name=new_name)
+    assert updated_image['name'] == new_name
 
 
 def test_delete_image():
