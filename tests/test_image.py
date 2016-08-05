@@ -45,8 +45,44 @@ def test_create_image(client, recorder):
     }
 
 
-def test_read_image():
-    pass
+def test_read_image(client, recorder):
+    with recorder.use_cassette('read_image'):
+        image = client.get_image(15826)
+
+    assert image == {
+        'cognitive_contrast_cogatlas_id': None,
+        'number_of_subjects': None,
+        'cognitive_paradigm_cogatlas': None,
+        'file': u'http://neurovault.org/media/images/1167/motor_lips.nii.gz',
+        'file_size': 856688,
+        'brain_coverage': 82.0078517876603,
+        'id': 15826,
+        'contrast_definition_cogatlas': None,
+        'figure': None,
+        'add_date': u'2016-02-05T21:18:46.661420Z',
+        'cognitive_paradigm_cogatlas_id': None,
+        'smoothness_fwhm': None,
+        'modality': u'fMRI-BOLD',
+        'is_valid': False,
+        'reduced_representation': u'http://neurovault.org/media/images/1167/transform_4mm_15826.npy',
+        'not_mni': False,
+        'thumbnail': u'http://neurovault.org/media/images/1167/glass_brain_15826.jpg',
+        'collection_id': 1167,
+        'description': u'',
+        'statistic_parameters': None,
+        'collection': u'http://neurovault.org/collections/1167/',
+        'cognitive_contrast_cogatlas': None,
+        'map_type': u'T map',
+        'perc_bad_voxels': 75.0073396711163,
+        'analysis_level': None,
+        'name': u'new_image_name',
+        'url': u'http://neurovault.org/images/15826/',
+        'contrast_definition': None,
+        'image_type': u'statistic_map',
+        'modify_date': u'2016-02-05T21:18:49.547536Z',
+        'perc_voxels_outside': 16.9408354056678,
+        'is_thresholded': False
+    }
 
 
 def test_update_image():
