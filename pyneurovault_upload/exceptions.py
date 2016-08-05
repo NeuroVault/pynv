@@ -1,7 +1,18 @@
 class APIError(Exception):
     def __init__(self, response):
-        super(APIError, self).__init__(response.text)
+
+        super(APIError, self).__init__(self._extract_text(response))
         self.response = response
+
+    def _extract_text(self, response):
+        return self._text_from_detail(response) or response.text
+
+    def _text_from_detail(self, response):
+        try:
+            errors = response.json()
+            return errors['detail']
+        except (AttributeError, KeyError):
+            return None
 
 
 class AuthenticationError(APIError):
