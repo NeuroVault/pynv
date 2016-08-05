@@ -52,7 +52,8 @@ class Client(object):
         return self.request('get', 'collections/%s' % collection_id).json()
 
     def update_collection(self, collection_id, **data):
-        raise NotImplementedError()
+        return self.request('patch', 'collections/%s' % collection_id,
+                            json=data).json()
 
     def delete_collection(self, collection_id):
         return self.request('delete', 'collections/%s' % collection_id)

@@ -48,12 +48,16 @@ def test_read_collection(client, recorder):
     assert subset_dict.viewitems() <= collection.viewitems()
 
 
-def test_update_collection_for_anonymous_user():
-    pass
+def test_update_collection_for_anonymous_user(anonymous_client):
+    with pytest.raises(AuthenticationError):
+        anonymous_client.update_collection(1167, name='New Name')
 
 
-def test_update_collection():
-    pass
+def test_update_collection(client, recorder):
+    with recorder.use_cassette('update_collection'):
+        collection = client.update_collection(1167, name='New Name')
+
+    assert collection['name'] == 'New Name'
 
 
 def test_delete_collection_for_anonymous_user(anonymous_client):
