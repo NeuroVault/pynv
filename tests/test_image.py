@@ -6,7 +6,7 @@ def test_create_image(client, recorder):
     with recorder.use_cassette('add_image'):
         result_dict = client.add_image(
             1167,
-            './var/motor_lips.nii.gz',
+            './tests/data/motor_lips.nii.gz',
             name='test image from cli',
             map_type='Z',
             modality='fMRI-BOLD',
