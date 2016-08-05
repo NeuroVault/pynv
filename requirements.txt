@@ -1,3 +1,6 @@
-requests=2.10.0
-pytest==2.9.2
+requests==2.10.0
 
+# Test
+pytest==2.9.2
+betamax==0.7.1
+betamax-serializers==0.2.0
