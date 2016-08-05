@@ -1,0 +1,47 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2016-08-05T15:00:46",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Authorization": "Bearer <ACCESS_TOKEN>",
+          "Connection": "keep-alive",
+          "Content-Length": "0",
+          "User-Agent": "python-requests/2.10.0"
+        },
+        "method": "DELETE",
+        "uri": "http://neurovault.org/api/collections/1612/"
+      },
+      "response": {
+        "body": {
+          "encoding": null,
+          "string": ""
+        },
+        "headers": {
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Headers": "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Origin": "*",
+          "Allow": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS",
+          "Connection": "keep-alive",
+          "Content-Length": "0",
+          "Date": "Fri, 05 Aug 2016 15:04:40 GMT",
+          "Server": "nginx/1.11.1",
+          "Vary": "Accept"
+        },
+        "status": {
+          "code": 204,
+          "message": "NO CONTENT"
+        },
+        "url": "http://neurovault.org/api/collections/1612/"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.7.1"
+}

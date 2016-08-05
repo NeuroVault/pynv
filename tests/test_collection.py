@@ -45,8 +45,11 @@ def test_delete_collection_for_anonymous_user():
     pass
 
 
-def test_delete_collection(client):
-    pass
+def test_delete_collection(client, recorder):
+    with recorder.use_cassette('delete_collection'):
+        response = client.delete_collection(1612)
+
+    assert response.ok
 
 
 def test_my_collections(client, recorder):

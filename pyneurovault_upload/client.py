@@ -35,7 +35,7 @@ class Client(object):
         )
 
         if response.ok:
-            return response.json()
+            return response
         elif response.status_code == 400:
             raise ValidationError(response)
         elif response.status_code == 401:
@@ -46,7 +46,7 @@ class Client(object):
     def create_collection(self, name, **data):
         data['name'] = name
 
-        return self.request('post', 'collections', json=data)
+        return self.request('post', 'collections', json=data).json()
 
     def get_collection(self, collection_id):
         raise NotImplementedError()
@@ -58,7 +58,7 @@ class Client(object):
         return self.request('delete', 'collections/%s' % collection_id)
 
     def my_collections(self):
-        return self.request('get', 'my_collections')
+        return self.request('get', 'my_collections').json()
 
     def add_image(self, collection_id, file_object_or_string, **data):
         files = {'file': open(file_object_or_string, 'rb')}
@@ -68,4 +68,4 @@ class Client(object):
             'collections/%s/images' % collection_id,
             data=data,
             files=files
-        )
+        ).json()
