@@ -1,5 +1,6 @@
+-include .env
 
 watch:
-	@ptw
+	NEUROVAULT_ACCESS_TOKEN=${NEUROVAULT_ACCESS_TOKEN} ptw
 
 .PHONY: watch
