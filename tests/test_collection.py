@@ -20,8 +20,9 @@ def test_create_collection_with_missing_fields(client, recorder):
 
 
 def test_create_collection_with_blank_name(client, recorder):
-    with pytest.raises(ValidationError) as excinfo:
-        client.create_collection('')
+    with recorder.use_cassette('create_collection_with_blank_name'):
+        with pytest.raises(ValidationError) as excinfo:
+            client.create_collection('')
 
     assert excinfo.value.errors == {'name': ['This field may not be blank.']}
 

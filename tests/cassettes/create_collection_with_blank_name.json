@@ -1,0 +1,45 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2016-08-05T19:25:06",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\": \"\"}"
+        },
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Authorization": "Bearer <ACCESS_TOKEN>",
+          "Connection": "keep-alive",
+          "Content-Length": "12",
+          "Content-Type": "application/json",
+          "User-Agent": "python-requests/2.10.0"
+        },
+        "method": "POST",
+        "uri": "http://neurovault.org/api/collections/"
+      },
+      "response": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "{\"name\":[\"This field may not be blank.\"]}"
+        },
+        "headers": {
+          "Allow": "GET, POST, HEAD, OPTIONS",
+          "Connection": "keep-alive",
+          "Content-Type": "application/json; charset=utf-8",
+          "Date": "Fri, 05 Aug 2016 19:28:59 GMT",
+          "Server": "nginx/1.11.1",
+          "Transfer-Encoding": "chunked",
+          "Vary": "Accept"
+        },
+        "status": {
+          "code": 400,
+          "message": "BAD REQUEST"
+        },
+        "url": "http://neurovault.org/api/collections/"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.7.1"
+}
