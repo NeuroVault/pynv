@@ -49,10 +49,9 @@ def test_update_collection():
     pass
 
 
-def test_delete_collection_for_anonymous_user(anonymous_client, recorder):
-    with recorder.use_cassette('delete_collection'):
-        with pytest.raises(AuthenticationError):
-            anonymous_client.delete_collection(1610)
+def test_delete_collection_for_anonymous_user(anonymous_client):
+    with pytest.raises(AuthenticationError):
+        anonymous_client.delete_collection(1610)
 
 
 def test_delete_collection(client, recorder):
@@ -72,7 +71,6 @@ def test_my_collections(client, recorder):
         assert len(collection['name']) > 0
 
 
-def test_my_collections_for_anonymous_user(anonymous_client, recorder):
-    with recorder.use_cassette('my_collections_anonymous'):
-        with pytest.raises(AuthenticationError):
-            anonymous_client.my_collections()
+def test_my_collections_for_anonymous_user(anonymous_client):
+    with pytest.raises(AuthenticationError):
+        anonymous_client.my_collections()
