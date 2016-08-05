@@ -37,8 +37,15 @@ def test_create_collection(client, recorder):
     assert subset_dict.viewitems() <= collection.viewitems()
 
 
-def test_read_collection():
-    pass
+def test_read_collection(client, recorder):
+    with recorder.use_cassette('read_collection'):
+        collection = client.get_collection(1167)
+
+    subset_dict = {
+        'name': 'First test collection'
+    }
+
+    assert subset_dict.viewitems() <= collection.viewitems()
 
 
 def test_update_collection_for_anonymous_user():

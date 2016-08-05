@@ -49,7 +49,7 @@ class Client(object):
         return self.request('post', 'collections', json=data).json()
 
     def get_collection(self, collection_id):
-        raise NotImplementedError()
+        return self.request('get', 'collections/%s' % collection_id).json()
 
     def update_collection(self, collection_id, **data):
         raise NotImplementedError()

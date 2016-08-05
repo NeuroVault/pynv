@@ -1,0 +1,49 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2016-08-05T16:33:14",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Authorization": "Bearer <ACCESS_TOKEN>",
+          "Connection": "keep-alive",
+          "User-Agent": "python-requests/2.10.0"
+        },
+        "method": "GET",
+        "uri": "http://neurovault.org/api/collections/1167/"
+      },
+      "response": {
+        "body": {
+          "base64_string": "H4sIAAAAAAAAA3VWy3LbOgz9lY7WSWwrzcvrTme66qarbjQ0BUmsKUIBScdp5/77BUm9lexs4OB18KD+ZarMjofD49NN5klnx6xxrjvudgY84UV47e6Q6p1ErUE6hcbuAnqX3WT4ZoCy4/Pzy00m0ThSJ++QLDsZtIURLfB/B9Z5C5Szwvj2xBqsCtWKGhieszDhviuy7ktAf5kiss23nz+yo/Fa32TCu2YM0omOXaXE+e8f9GSEHqKypAQrSXXRTRRU7KQohRMW3GQoyjIIg1G+Pzze7vPb/cOv/HA8PB3z57unp8Pj4fCbgS2WqnpfYp9v9/e/8vvjfX58+Hr38vLykOcBW6IqJscpe/feQSid81K1GaRLSpSpC/LGbrVw5XJVC8Zxkd4oN2I0mNo1ATO3nKQnjfL8gZybJvTQMaapVX9FIish57KiBaa+TGDrT3+4PQV3kOViNFjI1cdicR3EjTAllAbsmFpH2CGlcEJD0RuOemWk9jao4Tr84g475kWkzCa6CIIplBsnNaHvColtJ0jZqdok38yMlcKEYW7FGVYSLKEfoUqB5kiOIrdjOV5bLgJePRgJw9CS4NnWQ7Pn9pz1RcHbYN4KbtC1sOrvOEFWKwmFa5Q8z3mzZ8WZK+tEjNPvinz1yqrIJpIKczNVhVQmmmaowZCgA5fsuP+jP5ANLgSV5qjC1HpKDyv3JgiKTsgzd7vna5BegOw2g47jEUouJ8w+8pDHPPu5fPVCK/dexBuDPd18TcritOctYL9dZDElMJcVQ9yZTc8fTzXrJRL1R2ZJ71r9kacWo2brY6NYWW/1BBXQNCFbAK8eKfmZVhme/w71rLvzDK23EnieTyrRuM43YqOPYU0Jah4lWpyCTwGr6hY4hhhbIbUJGc7feNbQaGVA0ATq9cHLJLPcC817yqnPWVjUvDhNmELH12XmsfImVs2nkymI+TPnZeEwbK2XzvNajoO9BdM2kkQeYWX4vheW53268oJqfl4ctJ0OyphKX1dSEVjUftME2yLyak/TPApmhUyy6q1pp5W1gsOxkwte+bjMbwZzRWJoSbxZM3cLJb+8atGrDSKab3erAVa888OrZCiu4+2FYmBxNpKBE2Si+cqSunCkC9gFBXzDunQkPoX0Y81t4Ug2fgzMtARCjpdrAi0w/MI0WIf2rt+7tWL7GkQHjaobPnHWFpXSDkbva/liXPjTBeP2DUM7vR7p5Vm3Jkk/7MnMYNuMpFSmPyqLtZtHavnzTmm4LLMIx1+EZ5PfdesJVs/mRj2r8b//AXDUHgdQCgAA",
+          "encoding": "utf-8",
+          "string": ""
+        },
+        "headers": {
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Headers": "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Origin": "*",
+          "Allow": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS",
+          "Connection": "keep-alive",
+          "Content-Encoding": "gzip",
+          "Content-Type": "application/json; charset=utf-8",
+          "Date": "Fri, 05 Aug 2016 16:37:08 GMT",
+          "Server": "nginx/1.11.1",
+          "Transfer-Encoding": "chunked",
+          "Vary": "Accept-Encoding"
+        },
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "url": "http://neurovault.org/api/collections/1167/"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.7.1"
+}
