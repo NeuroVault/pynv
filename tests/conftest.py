@@ -6,7 +6,7 @@ from betamax_serializers import pretty_json
 
 from pyneurovault_upload import Client
 
-ACCESS_TOKEN = os.environ.get('NEUROVAULT_ACCESS_TOKEN')
+ACCESS_TOKEN = os.environ.get('NEUROVAULT_ACCESS_TOKEN', '** secret token **')
 
 betamax.Betamax.register_serializer(pretty_json.PrettyJSONSerializer)
 
