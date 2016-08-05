@@ -93,5 +93,7 @@ def test_update_image(client, recorder):
     assert updated_image['name'] == new_name
 
 
-def test_delete_image():
-    pass
+def test_delete_image(client, recorder):
+    with recorder.use_cassette('delete_image'):
+        response = client.delete_image(15826)
+    assert response.ok

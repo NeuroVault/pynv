@@ -77,3 +77,6 @@ class Client(object):
     def update_image(self, image_id, **data):
         return self.request('patch', 'images/%s' % image_id,
                             json=data).json()
+
+    def delete_image(self, image_id):
+        return self.request('delete', 'images/%s' % image_id)
