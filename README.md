@@ -27,7 +27,7 @@ api = Client(access_token='your_neurovault_personal_access_token')
 To create a new collection in NeuroVault you need to pass a dictionary of all of the metadata you would like to specify in the collection. At a minimum you must specify a collection name.
 
 ```python
-collection = api.create_collection('name of new collection')
+collection = api.create_collection('a name of a new collection')
 ```
 
 *Add Image to Collection*
