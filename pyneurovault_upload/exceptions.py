@@ -11,7 +11,7 @@ class APIError(Exception):
         try:
             errors = response.json()
             return errors['detail']
-        except (AttributeError, KeyError):
+        except (AttributeError, KeyError, ValueError):
             return None
 
 
