@@ -97,3 +97,13 @@ def test_delete_image(client, recorder):
     with recorder.use_cassette('delete_image'):
         response = client.delete_image(15826)
     assert response.ok
+
+
+def test_get_collection_images(client, recorder):
+    with recorder.use_cassette('get_collection_images'):
+        result_dict = client.get_collection_images(1615)
+
+    assert result_dict['count'] == 2
+
+    for image in result_dict['results']:
+        assert len(image['name']) > 0
