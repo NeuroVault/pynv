@@ -64,9 +64,11 @@ def test_read_image(client, recorder):
         'smoothness_fwhm': None,
         'modality': 'fMRI-BOLD',
         'is_valid': False,
-        'reduced_representation': 'http://neurovault.org/media/images/1167/transform_4mm_15826.npy',
+        'reduced_representation': 'http://neurovault.org'
+                                  '/media/images/1167/transform_4mm_15826.npy',
         'not_mni': False,
-        'thumbnail': 'http://neurovault.org/media/images/1167/glass_brain_15826.jpg',
+        'thumbnail': 'http://neurovault.org'
+                     '/media/images/1167/glass_brain_15826.jpg',
         'collection_id': 1167,
         'description': '',
         'statistic_parameters': None,
