@@ -41,12 +41,41 @@ Once a collection is created you can add images to it using the `add_image()` me
 image_file_path = 'path/to/image/file.nii.gz'
 
 image = api.add_image(
-    collection.id,
+    collection['id'],
     image_file_path,
     name='Parcellation_k25',
     modality='Other',
     map_type='Pa'
 )
+```
+
+You can also annotate an image with custom metadata:
+
+```python
+image = api.add_image(
+    collection['id'],
+    image_file_path,
+    name='Parcellation_k25',
+    modality='Other',
+    map_type='Pa',
+    custom_metadata_field=42
+)
+```
+
+*Update an image*
+
+```python
+api.update_image(
+    image['id'], 
+    map_type='T',
+    custom_metadata_field=42
+)
+```
+
+*Delete an image*
+
+```python
+api.delete_image(image['id'])
 ```
 
 *Delete a Collection*
