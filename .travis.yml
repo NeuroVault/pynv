@@ -3,6 +3,10 @@ language: python
 install:
   - pip install -r requirements.txt
   - pip install pytest-cov
+  - pip install python-coveralls
 
 script: 
-  py.test --cov-report= --cov=pyneurovault_upload tests/
+  py.test --cov-report= --cov=pyneurovault_upload tests/test_image.py
+  
+after_success:
+  - coveralls
