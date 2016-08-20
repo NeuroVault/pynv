@@ -1,4 +1,4 @@
-![Travis](https://api.travis-ci.org/neurolearn/pyneurovault_upload.svg?branch=master)
+[![build status](https://api.travis-ci.org/neurolearn/pyneurovault_upload.svg?branch=master)](https://travis-ci.org/neurolearn/pyneurovault_upload)
 
 # pyneurovault_upload
 Python library for interfacing with http://neurovault.org upload API
