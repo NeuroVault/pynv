@@ -1,6 +1,8 @@
 language: python
 
-install: pip install coveralls
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
 
 script: 
   coverage run --source pyneurovault_upload py.test
