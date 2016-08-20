@@ -1,5 +1,5 @@
 [![build status](https://api.travis-ci.org/neurolearn/pyneurovault_upload.svg?branch=master)](https://travis-ci.org/neurolearn/pyneurovault_upload)
-[![Coverage Status](https://coveralls.io/repos/github/neurolearn/pyneurovault_upload/badge.svg?branch=master)](https://coveralls.io/github/neurolearn/pyneurovault_upload?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/neurolearn/pyneurovault_upload/badge.svg?branch=master&1)](https://coveralls.io/github/neurolearn/pyneurovault_upload?branch=master)
 
 # pyneurovault_upload
 Python library for interfacing with http://neurovault.org upload API
