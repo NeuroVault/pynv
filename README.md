@@ -20,7 +20,7 @@ python setup.py install
 First, we need to create an instance of the Client class. This requires adding your NeuroVault personal access token which can be found under [“Personal Access tokens”](http://neurovault.org/accounts/tokens/) tab in the Account Settings.
 
 ```python
-from pyneurovault_upload.api import Client
+from pyneurovault_upload import Client
 
 api = Client(access_token='your_neurovault_personal_access_token')
 ```
