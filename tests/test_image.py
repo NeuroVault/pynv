@@ -111,6 +111,6 @@ def test_get_collection_images(client, recorder):
         assert len(image['name']) > 0
 
     with recorder.use_cassette('get_collection_images'):
-        result_dict = client.get_collection_images(1615,limit=10,offset=10)
-    assert int(i['next'].split('&offset=')[-1]) == 20
+        result_dict = client.get_collection_images(1615,limit=1,offset=2)
+    assert int(i['next'].split('&offset=')[-1]) == 3
 
