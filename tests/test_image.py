@@ -105,7 +105,12 @@ def test_get_collection_images(client, recorder):
     with recorder.use_cassette('get_collection_images'):
         result_dict = client.get_collection_images(1615)
 
-    assert result_dict['count'] == 2
+    assert result_dict['count'] == 5
 
     for image in result_dict['results']:
         assert len(image['name']) > 0
+
+    with recorder.use_cassette('get_collection_images_limit'):
+        result_dict = client.get_collection_images(1615, limit=1, offset=2)
+
+    assert int(result_dict['next'].split('&offset=')[-1]) == 3

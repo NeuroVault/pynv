@@ -24,6 +24,7 @@ class Client(object):
             self,
             method,
             endpoint,
+            params=None,
             data=None,
             json=None,
             files=None,
@@ -31,7 +32,7 @@ class Client(object):
         url = '%s%s%s' % (self.api_base_url, endpoint, suffix)
 
         response = getattr(self.session, method)(
-            url, json=json, data=data, files=files
+            url, json=json, params=params, data=data, files=files
         )
 
         if response.ok:
@@ -61,9 +62,15 @@ class Client(object):
     def my_collections(self):
         return self.request('get', 'my_collections').json()
 
-    def get_collection_images(self, collection_id):
-        return self.request('get',
-                            'collections/%s/images' % collection_id).json()
+    def get_collection_images(self, collection_id, limit=100, offset=0):
+        return self.request(
+            'get',
+            'collections/%s/images' % collection_id,
+            params={
+                'limit': limit,
+                'offset': offset
+            }
+        ).json()
 
     def add_image(self, collection_id, file, **data):
         files = {'file': open(file, 'rb')}
