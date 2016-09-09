@@ -61,9 +61,9 @@ class Client(object):
     def my_collections(self):
         return self.request('get', 'my_collections').json()
 
-    def get_collection_images(self, collection_id):
+    def get_collection_images(self, collection_id, limit=100, offset=0):
         return self.request('get',
-                            'collections/%s/images' % collection_id).json()
+                            'collections/%s/images/?limit=%s&offset=%s' % (collection_id, limit, offset)).json()
 
     def add_image(self, collection_id, file, **data):
         files = {'file': open(file, 'rb')}
