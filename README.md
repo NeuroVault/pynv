@@ -35,7 +35,44 @@ collection = api.create_collection('a name of a new collection')
 
 ### Add an image to a collection
 
-Once a collection is created you can add images to it using the `add_image()` method. You need to pass a string indicating the path to the file you would like to upload. You also need to pass a few mandatory parameters, which include the image name, the image modality, and the map type.
+Once a collection is created you can add images to it using the `add_image()` method. You need to pass a string indicating the path to the file you would like to upload. You also need to pass a few mandatory parameters, which include the **image name**, the **image modality**, and the **map type**.
+
+Here are tables containing the corresponding to the values required by Neurovault for various image parameters.
+
+| Map Type  | Neurovault Value |
+| ------------- | ------------- |
+| T map | T |
+| Z map  | Z |
+| F map | F |
+| Chi squared map  | X2 |
+| P map (given null hypothesis) | P |
+| Multivariate-beta map  | M |
+| Univariate-beta map  | U |
+| ROI/Mask  | R |
+| Parcellation | Pa |
+| Anatomical | A |
+| Other | OTHER |
+
+| Analysis Level  | Neurovault Value |
+| ------------- | ------------- |
+| Single-Subject | S |
+| Group  | G |
+| Meta-Analysis | M |
+| Other | OTHER |
+
+| Image Modality  | Neurovault Value |
+| ------------- | ------------- |
+| fMRI-BOLD | fMRI_BOLD |
+| fMRI-CBF  | fMRI_CBF |
+| fMRI-CBV | fMRI_CBV |
+| Diffusion MRI  | Diffusion_MRI |
+| Structural MRI | Structural_MRI |
+| PET FDG  | PET_FDG |
+| PET [15O]-water  | PET_15O |
+| PET Other | PET_OTHER |
+| MEG | MEG |
+| EEG | EEG |
+| Other | OTHER |
 
 ```python
 image_file_path = 'path/to/image/file.nii.gz'
@@ -84,4 +121,30 @@ To delete a collection you can simply run the `delete_collection()` method. You 
 
 ```python
 api.delete_collection(collection.id)
+```
+
+### Get a collection
+
+You can get information about a collection using the `get_collection()` method.
+
+```python
+c = api.get_collection(collection_id=collection)
+```
+
+### Get Collection images
+
+To get information about images within a collection, use the `get_collection_images()` method.  You can use the limit and offset keywords to set the pagination.  Here is an example using pagination to get information about collection images into a pandas data frame.
+
+```python
+import pandas as pd
+
+offset = 0
+limit = 10
+i = api.get_collection_images(collection_id=collection, limit=limit,offset=offset)
+dat = pd.DataFrame(columns=i['results'][0].keys())
+while int(offset) < int(i['count']):
+    for x in i['results']:
+        dat = dat.append(x,ignore_index=True)
+    offset = offset + limit
+    i = api.get_collection_images(collection_id=collection, limit=limit, offset=offset)
 ```
