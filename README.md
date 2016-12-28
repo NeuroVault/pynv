@@ -1,17 +1,23 @@
 [![build status](https://api.travis-ci.org/neurolearn/pyneurovault_upload.svg?branch=master)](https://travis-ci.org/neurolearn/pyneurovault_upload)
 [![Coverage Status](https://coveralls.io/repos/github/neurolearn/pyneurovault_upload/badge.svg?branch=master&1)](https://coveralls.io/github/neurolearn/pyneurovault_upload?branch=master)
 
-# pyneurovault_upload
-Python library for interfacing with http://neurovault.org upload API
+# pynv
+Python library for interfacing with http://neurovault.org API
 
 
 ## Installation
 
-```
-git clone https://github.com/neurolearn/pyneurovault_upload.git
-cd pyneurovault_upload
-python setup.py install
-```
+1. Method 1 (Recommended)
+    ```
+    pip install pynv
+    ```
+ 
+2. Method 2 (Latest Development Version)
+    ```
+    git clone https://github.com/neurolearn/pynv.git
+    cd pynv
+    python setup.py install
+    ```
 
 ## Example Usage
 
@@ -20,7 +26,7 @@ python setup.py install
 First, we need to create an instance of the Client class. This requires adding your NeuroVault personal access token which can be found under [“Personal Access tokens”](http://neurovault.org/accounts/tokens/) tab in the Account Settings.
 
 ```python
-from pyneurovault_upload import Client
+from pynv import Client
 
 api = Client(access_token='your_neurovault_personal_access_token')
 ```
