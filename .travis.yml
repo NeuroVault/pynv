@@ -6,7 +6,7 @@ install:
   - pip install python-coveralls
 
 script: 
-  py.test --cov-report= --cov=pyneurovault_upload tests
+  py.test --cov-report= --cov=pynv tests
   
 after_success:
   - coveralls
