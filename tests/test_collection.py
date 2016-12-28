@@ -1,6 +1,6 @@
 import pytest
 
-from pyneurovault_upload.exceptions import (
+from pynv.exceptions import (
     APIError, AuthenticationError, ValidationError
 )
 

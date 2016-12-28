@@ -4,7 +4,7 @@ import pytest
 import betamax
 from betamax_serializers import pretty_json
 
-from pyneurovault_upload import Client
+from pynv import Client
 
 ACCESS_TOKEN = os.environ.get('NEUROVAULT_ACCESS_TOKEN', '** secret token **')
 
