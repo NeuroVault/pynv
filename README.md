@@ -1,4 +1,4 @@
-[![build status](https://api.travis-ci.org/neurolearn/pyneurovault_upload.svg?branch=master)](https://travis-ci.org/neurolearn/pyneurovault_upload)
+[![build status](https://travis-ci.org/neurolearn/pynv.svg?branch=master)](https://travis-ci.org/neurolearn/pynv)
 [![Coverage Status](https://coveralls.io/repos/github/neurolearn/pyneurovault_upload/badge.svg?branch=master&1)](https://coveralls.io/github/neurolearn/pyneurovault_upload?branch=master)
 
 # pynv
