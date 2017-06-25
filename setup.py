@@ -3,11 +3,11 @@ try:
 except ImportError:
     from distutils.core import setup
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 setup(
     name='pynv',
-    version='0.1.0',
+    version='0.1.1',
     author='Anton Burnashev & Luke Chang',
     author_email='luke.j.chang@dartmouth.edu',
     url='https://github.com/ljchang/pynv',
