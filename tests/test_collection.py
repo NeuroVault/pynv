@@ -7,7 +7,7 @@ from pynv.exceptions import (
 
 def test_create_collection_for_anonymous_user(anonymous_client, recorder):
     with pytest.raises(APIError) as excinfo:
-        anonymous_client.create_collection('Anonymous')
+        anonymous_client.create_collection('Anonymous2020')
 
     assert excinfo.value.errors == {
         'detail': 'Authentication credentials were not provided.'
@@ -29,48 +29,36 @@ def test_create_collection_with_blank_name(client, recorder):
 
 def test_create_collection(client, recorder):
     with recorder.use_cassette('create_collection'):
-        collection = client.create_collection('NV Test Collection')
+        collection = client.create_collection('NV Test Collection2020')
 
     subset_dict = {
-        'name': 'NV Test Collection'
+        'name': 'NV Test Collection2020'
     }
 
-    assert subset_dict.viewitems() <= collection.viewitems()
+    assert subset_dict.items() <= collection.items()
 
 
 def test_read_collection(client, recorder):
     with recorder.use_cassette('read_collection'):
-        collection = client.get_collection(1167)
+        collection = client.get_collection(8477)
 
     subset_dict = {
         'name': 'First test collection'
     }
 
-    assert subset_dict.viewitems() <= collection.viewitems()
+    assert subset_dict.items() <= collection.items()
 
 
 def test_update_collection_for_anonymous_user(anonymous_client):
     with pytest.raises(AuthenticationError):
-        anonymous_client.update_collection(1167, name='New Name')
+        anonymous_client.update_collection(8477, name='New Name')
 
 
 def test_update_collection(client, recorder):
     with recorder.use_cassette('update_collection'):
-        collection = client.update_collection(1167, name='New Name')
+        collection = client.update_collection(8477, name='New Name 2020')
 
-    assert collection['name'] == 'New Name'
-
-
-def test_delete_collection_for_anonymous_user(anonymous_client):
-    with pytest.raises(AuthenticationError):
-        anonymous_client.delete_collection(1610)
-
-
-def test_delete_collection(client, recorder):
-    with recorder.use_cassette('delete_collection'):
-        response = client.delete_collection(1612)
-
-    assert response.ok
+    assert collection['name'] == 'New Name 2020'
 
 
 def test_my_collections(client, recorder):

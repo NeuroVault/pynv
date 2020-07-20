@@ -56,9 +56,6 @@ class Client(object):
         return self.request('patch', 'collections/%s' % collection_id,
                             json=data).json()
 
-    def delete_collection(self, collection_id):
-        return self.request('delete', 'collections/%s' % collection_id)
-
     def my_collections(self):
         return self.request('get', 'my_collections').json()
 
@@ -84,10 +81,3 @@ class Client(object):
 
     def get_image(self, image_id):
         return self.request('get', 'images/%s' % image_id).json()
-
-    def update_image(self, image_id, **data):
-        return self.request('patch', 'images/%s' % image_id,
-                            json=data).json()
-
-    def delete_image(self, image_id):
-        return self.request('delete', 'images/%s' % image_id)

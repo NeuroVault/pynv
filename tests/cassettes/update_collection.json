@@ -1,51 +1,93 @@
 {
   "http_interactions": [
     {
-      "recorded_at": "2016-08-05T18:24:28",
+      "recorded_at": "2020-07-20T22:38:56",
       "request": {
         "body": {
           "encoding": "utf-8",
-          "string": "{\"name\": \"New Name\"}"
+          "string": "{\"name\": \"New Name 2020\"}"
         },
         "headers": {
-          "Accept": "*/*",
-          "Accept-Encoding": "gzip, deflate",
-          "Authorization": "Bearer <ACCESS_TOKEN>",
-          "Connection": "keep-alive",
-          "Content-Length": "20",
-          "Content-Type": "application/json",
-          "User-Agent": "python-requests/2.10.0"
+          "Accept": [
+            "*/*"
+          ],
+          "Accept-Encoding": [
+            "gzip, deflate"
+          ],
+          "Authorization": [
+            "Bearer <ACCESS_TOKEN>"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "25"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "python-requests/2.21.0"
+          ]
         },
         "method": "PATCH",
-        "uri": "http://neurovault.org/api/collections/1167/"
+        "uri": "https://neurovault.org/api/collections/8477/"
       },
       "response": {
         "body": {
-          "base64_string": "H4sIAAAAAAAAA3VWy3bbOAz9lTlau3Gknklcr7uZTWfT1Wx4aAqSWFOEApK20znz7wOKeivZ2cDF6+JB/ZvpMjvn+cvrIQtksnPWeN+dj0cLgfAmg/FPSPVRoTGgvEbrjhF9zA4Z3i1Qdj6dvh0yhdaTvgSP5NjJqBVWtsD/PTgfHFDBChvaC2uwErqVNTC8YGHC/YD7Hz/iz0P2/e+/srMNxhwyGXwz+e1kx9YpV/77CwNZacZALCnBKdJdzDUJKnYiSumlAz8byrKMwmhUPOcvX56LL89//izyc/56Lk5Pr6/5S57/w8AWS129r7GniM1PDDwXxdPXPD8V3yK2RC1mxyl7/95BrJbz0rUdpWsWtK0FBev2WnhwuboF67nIYLWfMAZs7ZuIWVrO0otBdf1Azn2SZmwS09Tq3zKRlZBLmWiBqS8T2IXLL54BwU1juZwMVnL9sVg+RnEjbQmlBTel1hF2SCmcNCAGw0mvrTLBRTU8xl/cYc+8yJTZTBdBNIVy56QmDJ1Q2HaStJurTfLdzDglbZzfVl5hI8EShhGqNBiO5KnndionGMdFwFsAq2AcWpK8QGZs9tKes75puI/mreQGPYTTv6cJckYrEL7R6rrkzV01Z66dl32cYVfUW9BO92wi6Tg3c1VIZaJpgRoNCTrwyY77P/kD1eBKUBmOKm1t5vSw8ndJIDqprtztga9RegNy+ww6jkeouJw4+8hD3uc5zOVbkEb7d9GfFRzo5gNSisszbwH77XoWUwJLmRjjLmwG/niqWa+QKF2yDb1b9UeeWuw1ex87xcZ6ryeogOYJ2QN49Uirz7Ta8vx3aBbdXWboglPA83zRicZtvj229zGuKUHNo0SrU/ApYFPdCscQ6yqkNiHj+ZvOGlqjLUiaQYM+eplljntheE859SULq5pXpwlT6P5BWXisgu2r5tPJFPT5M+el8Bi3NigfeC2nwd6DaR9JIY+wtnzfheN5n6+8pJqfFw9tZ6KyT2WoK6kIHJqwa4JrEXm152meBItCZll1b9p5ZZ3kcOzkhg8+LsubwVyRHFvS36yFu5WSn2a96tUO0Zvvd6sBVrzzw6tVLK7j7QUxsrgYycgJMtF8ZUnfONIN3IoCvmFdOhKfQoax5rZwJNd/DCy0BFJNl2sGrTD8wjRYx/Zu37utYv8a9A4aXTd84pwTlTYeJu9b+Wpc+NMF++0bh3Z+PdLLs21Nkn7Yk4XBvhlJqe1wVFZrt4zU8hedNnBbZxGPv4zPJr/rLhBsns2delHjf/8DNRiehEMKAAA=",
+          "base64_string": "H4sIAAAAAAAAA5VWyXLkNgz9lSmdPXbb8drnXHKZXHKaVErFpiCJY4qQubTtSeXf8yhqoST7MLdubAQeHgD9W6iqOD7ePjxcFMHq4li03vfueHVlKFg+i6D9JdvmSrLWJL1i466i+VVxUVT8ajSLqvw1z8kNEfCLbHG8vnt6uigkG2/VKXi2DuEmdWlER/hfkRZnasQtFCZ0J2i4LlUnGoL5AcJk941ev3zDzy83h5sDbH//84/iaILWF4UIvp2D96JHiJQ6/v7gYI3Q02uxPHLSqj5mngQ1gpSV8MKRXxx7q87Cw6cW2hEeqapoFIPEDL4eHr7eHP66uT7ePR1vry+fbu8en+6/w7HjStXvH9neHA+Px9+uLx/v7++uH74PUKtyCZyq8e89RQiQp2rMJF1Do0xT2mDcXktvKF91ZDyKDkb52UaTaXwbbXLPRXrSLJ8/kKN5QGDsHGDr1E+RwEuWuazsCK2okrELpx9gSIlOQi5mh5VcfSwWb5O4FaaiypCbU+st92zTc0JTOTrOemWkDi6q6W36hY574CJSZgtclqIrVbsgjeXQl5K7XljllmqTfMchJ4WJpO7EM20kDIaPRFOk8ZK3A7ZzOQH8Kh29BDKSJhJbgfHSU7Nzf2R9VvQ6uXcCDXornfo5M8hpJan0rZLPOW7uWSFz5bwY3hlnR74E5dSAJlsVebNUxbZKMGVWk6OlnnzyQ//neCRbXglqjVeFafSSHtf+VVgqeyGf0e0Rr0l6Juv2GfR4z7JEOZH7DJIPeY68fAlCK/9eDruGR7iDQ19PB0wB4vYDiimBXFZO72Y+I35gNfSSrU17bgPvVv1RpI4HzT7GTrHx3ust1WQXhuwNMHpWyc+0yoD/Peusu3mGLjhJ4PNJJRi3+Q62Q4xpTC01oJJdrYJPDTbVrexgYlzNtkuWcf3Na42NVoaEXYxGfYyyyBx6oTGnSD1HYVXzajVxenq4MlnEOpihaqxOQDDkD8yr0nOc2iB9wFjOxN4b2/1LkkFhZbDfSwe+L1te2AbnxlPX66gcUhnrSipLjnXYNcF1zBjthc2zICtkkdWvbbeMrBN4DkHO/Iblku8MYGXF1JJhZ2XhVkpyoH7eq53F4L6frZageMchVjIW12N6qZxQzCgZMWEAjS073GB1JreCADusT0viU5OR1mgLXnLDx0GmtSTkvLkWo5UNLkzLTWzv9t5tFftrMARoVdNixTlX1kp7mqNv5Su64FOGh+mbSLtcj3R5tq1J0g97kjnsm5GUyoxLZTV2+UsdvveUpvM6i7j8RTybuOsuWNqczZ16VaMJ/mSFMmUbTIP6cZCWr59ZWTNXw6FLW9ZUKtv3ayucHCXzOZ7V+KbDbH3qzRXbnRY3v4sfTipW9fc///0PcyNX3EwLAAA=",
           "encoding": "utf-8",
           "string": ""
         },
         "headers": {
-          "Access-Control-Allow-Credentials": "true",
-          "Access-Control-Allow-Headers": "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
-          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-          "Access-Control-Allow-Origin": "*",
-          "Allow": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS",
-          "Connection": "keep-alive",
-          "Content-Encoding": "gzip",
-          "Content-Type": "application/json; charset=utf-8",
-          "Date": "Fri, 05 Aug 2016 18:28:22 GMT",
-          "Server": "nginx/1.11.1",
-          "Transfer-Encoding": "chunked",
-          "Vary": "Accept-Encoding"
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Access-Control-Allow-Headers": [
+            "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, OPTIONS"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Allow": [
+            "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Encoding": [
+            "gzip"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Mon, 20 Jul 2020 22:08:31 GMT"
+          ],
+          "Server": [
+            "nginx/1.15.6"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=31536000"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Vary": [
+            "Accept-Encoding",
+            "Accept"
+          ]
         },
         "status": {
           "code": 200,
           "message": "OK"
         },
-        "url": "http://neurovault.org/api/collections/1167/"
+        "url": "https://neurovault.org/api/collections/8477/"
       }
     }
   ],
-  "recorded_with": "betamax/0.7.1"
+  "recorded_with": "betamax/0.8.1"
 }

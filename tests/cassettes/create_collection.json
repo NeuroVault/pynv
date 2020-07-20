@@ -1,50 +1,91 @@
 {
   "http_interactions": [
     {
-      "recorded_at": "2016-08-05T16:25:18",
+      "recorded_at": "2020-07-20T22:37:37",
       "request": {
         "body": {
           "encoding": "utf-8",
-          "string": "{\"name\": \"NV Test Collection\"}"
+          "string": "{\"name\": \"NV Test Collection2020\"}"
         },
         "headers": {
-          "Accept": "*/*",
-          "Accept-Encoding": "gzip, deflate",
-          "Authorization": "Bearer <ACCESS_TOKEN>",
-          "Connection": "keep-alive",
-          "Content-Length": "30",
-          "Content-Type": "application/json",
-          "User-Agent": "python-requests/2.10.0"
+          "Accept": [
+            "*/*"
+          ],
+          "Accept-Encoding": [
+            "gzip, deflate"
+          ],
+          "Authorization": [
+            "Bearer <ACCESS_TOKEN>"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "34"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "python-requests/2.21.0"
+          ]
         },
         "method": "POST",
-        "uri": "http://neurovault.org/api/collections/"
+        "uri": "https://neurovault.org/api/collections/"
       },
       "response": {
         "body": {
           "encoding": "utf-8",
-          "string": "{\"id\":1615,\"url\":\"http://neurovault.org/collections/1615/\",\"owner\":889,\"contributors\":\"\",\"owner_name\":\"testuser2\",\"number_of_images\":0,\"name\":\"NV Test Collection\",\"DOI\":null,\"authors\":null,\"paper_url\":null,\"journal_name\":null,\"description\":null,\"full_dataset_url\":null,\"add_date\":\"2016-08-05T16:29:12.199039Z\",\"modify_date\":\"2016-08-05T16:29:12.199063Z\",\"doi_add_date\":null,\"type_of_design\":null,\"number_of_imaging_runs\":null,\"number_of_experimental_units\":null,\"length_of_runs\":null,\"length_of_blocks\":null,\"length_of_trials\":null,\"optimization\":null,\"optimization_method\":null,\"subject_age_mean\":null,\"subject_age_min\":null,\"subject_age_max\":null,\"handedness\":null,\"proportion_male_subjects\":null,\"inclusion_exclusion_criteria\":null,\"number_of_rejected_subjects\":null,\"group_comparison\":null,\"group_description\":null,\"scanner_make\":null,\"scanner_model\":null,\"field_strength\":null,\"pulse_sequence\":null,\"parallel_imaging\":null,\"field_of_view\":null,\"matrix_size\":null,\"slice_thickness\":null,\"skip_distance\":null,\"acquisition_orientation\":null,\"order_of_acquisition\":null,\"repetition_time\":null,\"echo_time\":null,\"flip_angle\":null,\"software_package\":null,\"software_version\":null,\"order_of_preprocessing_operations\":null,\"quality_control\":null,\"used_b0_unwarping\":null,\"b0_unwarping_software\":null,\"used_slice_timing_correction\":null,\"slice_timing_correction_software\":null,\"used_motion_correction\":null,\"motion_correction_software\":null,\"motion_correction_reference\":null,\"motion_correction_metric\":null,\"motion_correction_interpolation\":null,\"used_motion_susceptibiity_correction\":null,\"used_intersubject_registration\":null,\"intersubject_registration_software\":null,\"intersubject_transformation_type\":null,\"nonlinear_transform_type\":null,\"transform_similarity_metric\":null,\"interpolation_method\":null,\"object_image_type\":null,\"functional_coregistered_to_structural\":null,\"functional_coregistration_method\":null,\"coordinate_space\":null,\"target_template_image\":null,\"target_resolution\":null,\"used_smoothing\":null,\"smoothing_type\":null,\"smoothing_fwhm\":null,\"resampled_voxel_size\":null,\"intrasubject_model_type\":null,\"intrasubject_estimation_type\":null,\"intrasubject_modeling_software\":null,\"hemodynamic_response_function\":null,\"used_temporal_derivatives\":null,\"used_dispersion_derivatives\":null,\"used_motion_regressors\":null,\"used_reaction_time_regressor\":null,\"used_orthogonalization\":null,\"orthogonalization_description\":null,\"used_high_pass_filter\":null,\"high_pass_filter_method\":null,\"autocorrelation_model\":null,\"group_model_type\":null,\"group_estimation_type\":null,\"group_modeling_software\":null,\"group_inference_type\":null,\"group_model_multilevel\":null,\"group_repeated_measures\":null,\"group_repeated_measures_method\":null}"
+          "string": "{\"id\":8478,\"url\":\"https://neurovault.org/collections/8478/\",\"download_url\":\"https://neurovault.org/collections/8478/download\",\"owner\":1599,\"contributors\":\"\",\"owner_name\":\"delavega4\",\"number_of_images\":0,\"name\":\"NV Test Collection2020\",\"DOI\":null,\"authors\":null,\"paper_url\":null,\"journal_name\":null,\"description\":null,\"full_dataset_url\":null,\"private\":false,\"add_date\":\"2020-07-20T22:07:13.006262Z\",\"modify_date\":\"2020-07-20T22:07:13.006285Z\",\"doi_add_date\":null,\"type_of_design\":null,\"number_of_imaging_runs\":null,\"number_of_experimental_units\":null,\"length_of_runs\":null,\"length_of_blocks\":null,\"length_of_trials\":null,\"optimization\":null,\"optimization_method\":null,\"subject_age_mean\":null,\"subject_age_min\":null,\"subject_age_max\":null,\"handedness\":null,\"proportion_male_subjects\":null,\"inclusion_exclusion_criteria\":null,\"number_of_rejected_subjects\":null,\"group_comparison\":null,\"group_description\":null,\"scanner_make\":null,\"scanner_model\":null,\"field_strength\":null,\"pulse_sequence\":null,\"parallel_imaging\":null,\"field_of_view\":null,\"matrix_size\":null,\"slice_thickness\":null,\"skip_distance\":null,\"acquisition_orientation\":null,\"order_of_acquisition\":null,\"repetition_time\":null,\"echo_time\":null,\"flip_angle\":null,\"software_package\":null,\"software_version\":null,\"order_of_preprocessing_operations\":null,\"quality_control\":null,\"used_b0_unwarping\":null,\"b0_unwarping_software\":null,\"used_slice_timing_correction\":null,\"slice_timing_correction_software\":null,\"used_motion_correction\":null,\"motion_correction_software\":null,\"motion_correction_reference\":null,\"motion_correction_metric\":null,\"motion_correction_interpolation\":null,\"used_motion_susceptibiity_correction\":null,\"used_intersubject_registration\":null,\"intersubject_registration_software\":null,\"intersubject_transformation_type\":null,\"nonlinear_transform_type\":null,\"transform_similarity_metric\":null,\"interpolation_method\":null,\"object_image_type\":null,\"functional_coregistered_to_structural\":null,\"functional_coregistration_method\":null,\"coordinate_space\":null,\"target_template_image\":null,\"target_resolution\":null,\"used_smoothing\":null,\"smoothing_type\":null,\"smoothing_fwhm\":null,\"resampled_voxel_size\":null,\"intrasubject_model_type\":null,\"intrasubject_estimation_type\":null,\"intrasubject_modeling_software\":null,\"hemodynamic_response_function\":null,\"used_temporal_derivatives\":null,\"used_dispersion_derivatives\":null,\"used_motion_regressors\":null,\"used_reaction_time_regressor\":null,\"used_orthogonalization\":null,\"orthogonalization_description\":null,\"used_high_pass_filter\":null,\"high_pass_filter_method\":null,\"autocorrelation_model\":null,\"group_model_type\":null,\"group_estimation_type\":null,\"group_modeling_software\":null,\"group_inference_type\":null,\"group_model_multilevel\":null,\"group_repeated_measures\":null,\"group_repeated_measures_method\":null,\"nutbrain_hunger_state\":null,\"nutbrain_food_viewing_conditions\":null,\"nutbrain_food_choice_type\":null,\"nutbrain_taste_conditions\":null,\"nutbrain_odor_conditions\":null,\"communities\":[]}"
         },
         "headers": {
-          "Access-Control-Allow-Credentials": "true",
-          "Access-Control-Allow-Headers": "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
-          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-          "Access-Control-Allow-Origin": "*",
-          "Allow": "GET, POST, HEAD, OPTIONS",
-          "Connection": "keep-alive",
-          "Content-Type": "application/json; charset=utf-8",
-          "Date": "Fri, 05 Aug 2016 16:29:12 GMT",
-          "Location": "http://neurovault.org/collections/1615/",
-          "Server": "nginx/1.11.1",
-          "Transfer-Encoding": "chunked",
-          "Vary": "Accept"
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Access-Control-Allow-Headers": [
+            "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, OPTIONS"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Allow": [
+            "GET, POST, HEAD, OPTIONS"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Mon, 20 Jul 2020 22:07:13 GMT"
+          ],
+          "Location": [
+            "https://neurovault.org/collections/8478/"
+          ],
+          "Server": [
+            "nginx/1.15.6"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=31536000"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Vary": [
+            "Accept"
+          ]
         },
         "status": {
           "code": 201,
           "message": "CREATED"
         },
-        "url": "http://neurovault.org/api/collections/"
+        "url": "https://neurovault.org/api/collections/"
       }
     }
   ],
-  "recorded_with": "betamax/0.7.1"
+  "recorded_with": "betamax/0.8.1"
 }

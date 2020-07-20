@@ -1,49 +1,87 @@
 {
   "http_interactions": [
     {
-      "recorded_at": "2016-09-09T23:40:25",
+      "recorded_at": "2020-07-20T22:41:08",
       "request": {
         "body": {
           "encoding": "utf-8",
           "string": ""
         },
         "headers": {
-          "Accept": "*/*",
-          "Accept-Encoding": "gzip, deflate",
-          "Authorization": "Bearer <ACCESS_TOKEN>",
-          "Connection": "keep-alive",
-          "User-Agent": "python-requests/2.11.1"
+          "Accept": [
+            "*/*"
+          ],
+          "Accept-Encoding": [
+            "gzip, deflate"
+          ],
+          "Authorization": [
+            "Bearer <ACCESS_TOKEN>"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "User-Agent": [
+            "python-requests/2.21.0"
+          ]
         },
         "method": "GET",
-        "uri": "http://neurovault.org/api/collections/1615/images/?limit=1&offset=2"
+        "uri": "https://neurovault.org/api/collections/1615/images/?limit=1&offset=2"
       },
       "response": {
         "body": {
-          "base64_string": "H4sIAAAAAAAAA61US2vcMBj8K4sPPSW2tX6uIRRKL4WWQsmppQit9dmroIeRZDdOyH/vJ+8jSZfdU28reWY032i0z1FrRu2jpriJNDzij2jn/dAkiYbRmomN0sfG9gkbRNIaKaH1wmiXkJIUiVCsB5d8lEIJf0c+mK5z4O+y6CYaLEzCjO6/CBIUtOCQinq/nqPRyou6B4l1XudZgjzBo2ZZ3ESdkHCRp4ALdmQvZpTxxlIpBkeLWAsR90+o9+r5otTZWO9oNDgK23tD1IkndFUXZVnXAddr4cUEdGCWcdErilvMSxaiZNxIcC1ov3KzGrxRK6EnXBo7R1fJy6mRt4oW64x3JSk5q1n5jtQa7S1z/s2JepTyKmTR3aMUG6ifhxDxzxUuUJtpJmcnHJUwgTwCNVMBtGS9qhDGcSYrhkOogcc55cwH1Dol5W1a35LNPcmbPG/WVVylZZ3XPxGoDBfd/C82I/ekaoqyyauYbMpiUwQs2piYDH69HSGk348Wjqb8blRbzcTlZp03pMcAHN1aJjRdOhY/DP3SVT62wKkFfAYOr4dd7cu5MGasXWfwtnKlDtJ6mPdD+B2K7ozkgKN0TDqcZQDb0i3jdDKPIPHiqiJO0yrLNmVFCCmx/dp4qrQ4Ufa2WzOBxYOxgevAqAtS1VVZptlBdC9Izeid4BCaG2/ytM6KPMXKVlhZjcGBpaajbtw+YMlPvcHbwcD9jJN33358uf30/etnnMGFPJwX7VJTBR7sieKUMX6nAXPt/uzUawMPvePQidDFEOfFT1cKfHoYbzpHl/+TPRKD50bRwRqc3s90jd4Pe1ieEaJzCImafI1njM4ftvclXi70+CJeZw4v4+X3y1+NoIloegUAAA==",
+          "base64_string": "H4sIAAAAAAAAA61V247bNhD9FYMPffLapq2bBQQFggDFAt22aPOUoiC44khiwItKUk6UIP+eoS72ejfrp7xJ1MzhmZkzR19JZXsTSJmuiYHP+EDaEDpfbrcGemdPvFdhY12z5Z3cVlYpqIK0xm9pRtOt1LwBv/1VSS3DG/qLrWsP4c2BrEnn4CRt738OIkVEBx5TEfDfr6R36nXgGWOfFMlhi4lSkHJ8WZNaKng9UYOQfEkf6WgbrGNKdp6lGyPlpvmCgBfWr2O9qOwqj0VO8XiixLz8gryKNMuKIsY1RgZ5AtZxx4VsNMMjHhSP7eTCKvAVmLDyg+6C1StpTvhq3UBuJo+3kuA0S/cHUWc0E7zg2VVSZU1w3IcnN5peqZshI+4UpXnHwtDFJn9Y4Qtic8PV4KVnCk6glkDDdQwam73KMUxgTU52c1djnhBM8BCj9jua3e2KO3p8T5MyScp9vsl3WZEUHzBQWyHr4Xnsgb6neZlmZZJv6DFLj2mMRRonriLf4HpYE9+7mleA3OrAJnVM/JYPTjbt9Re8hzOL5zISPVnVYyVrErhrILAAulPIhI2VYcBvYMDJ6uGPexJRHz+iApjvoJIwLofVduVxF8B4EtXQ9O58VcuNAGHAn6cwYk6PDeBHt7w5JLs8Q2iNrGQYloO3D/fLY80D68BF+TzB+sQlzrOVHXMcJ3CeJnDD/nr3D/OVvbAK3GBJzD8FEHzwqGKDHdNYCTaXT5OcC7G9W76rKB1EPkvhEYfyiCq6usR33v1/fYRxlD6j0vb60XB5ww1eLnWDDPBGx6Vhoy9sPnbNaDCir0AwB2hePjbo9oq/RMa1ML62uGCJ1jO26YZJd6FF1NYqnCgpa648yi9OAmsX7GQ/g8Ip5+lmt8sPh2OWU0oztCxjsVtGnlMm3pU9gRv7X+xjRpHSvMizbHeYQSdAZvvgpYBoNptjsisOabJDl8nRZQy2Dsdoazar8iwyXCjckSgfUj/8fX/39s/f30Xxxob4IKvRWTQEcOcUr61F1aFSWf2p1RfTmK1CQC2jfVwk8YNPNzzn7GVPbIKNf4FF/kZYzTpnsfowsD1yn89w3/u4oM9DKCmTPd7R+zAfT74zDnQxsUvN0cy+/fftO8ONcBkyBwAA",
           "encoding": "utf-8",
           "string": ""
         },
         "headers": {
-          "Access-Control-Allow-Credentials": "true",
-          "Access-Control-Allow-Headers": "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type",
-          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-          "Access-Control-Allow-Origin": "*",
-          "Allow": "GET, POST, HEAD, OPTIONS",
-          "Connection": "keep-alive",
-          "Content-Encoding": "gzip",
-          "Content-Type": "application/json; charset=utf-8",
-          "Date": "Fri, 09 Sep 2016 23:39:47 GMT",
-          "Server": "nginx/1.11.1",
-          "Transfer-Encoding": "chunked",
-          "Vary": "Accept-Encoding"
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Access-Control-Allow-Headers": [
+            "Authorization,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, OPTIONS"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Allow": [
+            "GET, POST, HEAD, OPTIONS"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Encoding": [
+            "gzip"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Date": [
+            "Mon, 20 Jul 2020 22:10:44 GMT"
+          ],
+          "Server": [
+            "nginx/1.15.6"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=31536000"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Vary": [
+            "Accept-Encoding",
+            "Accept"
+          ]
         },
         "status": {
           "code": 200,
           "message": "OK"
         },
-        "url": "http://neurovault.org/api/collections/1615/images/?limit=1&offset=2"
+        "url": "https://neurovault.org/api/collections/1615/images/?limit=1&offset=2"
       }
     }
   ],
-  "recorded_with": "betamax/0.7.1"
+  "recorded_with": "betamax/0.8.1"
 }
