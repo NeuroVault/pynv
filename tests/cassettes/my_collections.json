@@ -15,7 +15,7 @@
             "gzip, deflate"
           ],
           "Authorization": [
-            "Bearer <ACCESS_TOKEN>"
+            "Token <ACCESS_TOKEN>"
           ],
           "Connection": [
             "keep-alive"
