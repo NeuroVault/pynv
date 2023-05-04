@@ -17,7 +17,7 @@ class Client(object):
 
         if access_token:
             self.session.headers.update(
-                {'Authorization': 'Bearer %s' % access_token}
+                {'Authorization': 'Token %s' % access_token}
             )
 
     def request(
