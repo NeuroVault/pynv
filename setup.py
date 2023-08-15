@@ -3,11 +3,11 @@ try:
 except ImportError:
     from distutils.core import setup
 
-__version__ = '0.2'
+__version__ = '0.3'
 
 setup(
     name='pynv',
-    version='0.2',
+    version='0.3',
     author='Anton Burnashev & Luke Chang',
     author_email='luke.j.chang@dartmouth.edu',
     url='https://github.com/neurolearn/pynv',
